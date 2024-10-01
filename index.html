@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparison: Light vs Dark</title>
   <style>
+    /* Common styles for both light and dark */
     body {
       font-family: 'Georgia', serif;
       line-height: 1.6;
@@ -43,31 +44,48 @@
       background-color: #002B36;
       color: #eee;
     }
-    .cm-readability-0 { background-color: #3db13faa; color: inherit; }
-    .cm-readability-1 { background-color: #53e955aa; color: inherit; }
-    .cm-readability-2 { background-color: #7df858aa; color: inherit; }
-    .cm-readability-3 { background-color: #97f749aa; color: inherit; }
-    .cm-readability-4 { background-color: #c3f749aa; color: inherit; }
-    .cm-readability-5 { background-color: #ebf749aa; color: inherit; }
-    .cm-readability-6 { background-color: #f8e114aa; color: inherit; }
-    .cm-readability-7 { background-color: #fca625aa; color: inherit; }
-    .cm-readability-8 { background-color: #ff6911aa; color: inherit; }
-    .cm-readability-9 { background-color: #ff3b00aa; color: inherit; }
-    .cm-readability-10 { background-color: #ff0000aa; color: inherit; }
+  
+    /* Styles for Light and White backgrounds */
+    .light .cm-readability-0, .white .cm-readability-0 { background-color: #3db13faa; color: inherit; }
+    .light .cm-readability-1, .white .cm-readability-1 { background-color: #53e955aa; color: inherit; }
+    .light .cm-readability-2, .white .cm-readability-2 { background-color: #7df858aa; color: inherit; }
+    .light .cm-readability-3, .white .cm-readability-3 { background-color: #97f749aa; color: inherit; }
+    .light .cm-readability-4, .white .cm-readability-4 { background-color: #c3f749aa; color: inherit; }
+    .light .cm-readability-5, .white .cm-readability-5 { background-color: #ebf749aa; color: inherit; }
+    .light .cm-readability-6, .white .cm-readability-6 { background-color: #f8e114aa; color: inherit; }
+    .light .cm-readability-7, .white .cm-readability-7 { background-color: #fca625aa; color: inherit; }
+    .light .cm-readability-8, .white .cm-readability-8 { background-color: #ff6911aa; color: inherit; }
+    .light .cm-readability-9, .white .cm-readability-9 { background-color: #ff3b00aa; color: inherit; }
+    .light .cm-readability-10, .white .cm-readability-10 { background-color: #ff0000aa; color: inherit; }
+  
+    /* Styles for Dark and Blue backgrounds */
+    .dark .cm-readability-0, .blue .cm-readability-0 { background-color: #3db13faa; color: inherit; }
+    .dark .cm-readability-1, .blue .cm-readability-1 { background-color: #53e955aa; color: inherit; }
+    .dark .cm-readability-2, .blue .cm-readability-2 { background-color: #7df858aa; color: inherit; }
+    .dark .cm-readability-3, .blue .cm-readability-3 { background-color: #97f749aa; color: inherit; }
+    .dark .cm-readability-4, .blue .cm-readability-4 { background-color: #c3f749aa; color: inherit; }
+    .dark .cm-readability-5, .blue .cm-readability-5 { background-color: #ebf749aa; color: inherit; }
+    .dark .cm-readability-6, .blue .cm-readability-6 { background-color: #f8e114aa; color: inherit; }
+    .dark .cm-readability-7, .blue .cm-readability-7 { background-color: #fca625aa; color: inherit; }
+    .dark .cm-readability-8, .blue .cm-readability-8 { background-color: #ff6911aa; color: inherit; }
+    .dark .cm-readability-9, .blue .cm-readability-9 { background-color: #ff3b00aa; color: inherit; }
+    .dark .cm-readability-10, .blue .cm-readability-10 { background-color: #ff0000aa; color: inherit; }
 
-    .cm-readability-0::before { content: "0 ";}
-    .cm-readability-1::before { content: "1 ";}
-    .cm-readability-2::before { content: "2 ";}
-    .cm-readability-3::before { content: "3 ";}
-    .cm-readability-4::before { content: "4 ";}
-    .cm-readability-5::before { content: "5 ";}
-    .cm-readability-6::before { content: "6 ";}
-    .cm-readability-7::before { content: "7 ";}
-    .cm-readability-8::before { content: "8 ";}
-    .cm-readability-9::before { content: "9 ";}
-    .cm-readability-10::before { content: "10 "; }
+    /* readability index */
+    .cm-readability-0::before { content: "0 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-1::before { content: "1 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-2::before { content: "2 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-3::before { content: "3 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-4::before { content: "4 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-5::before { content: "5 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-6::before { content: "6 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-7::before { content: "7 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-8::before { content: "8 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-9::before { content: "9 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
+    .cm-readability-10::before { content: "10 "; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 0.85em; margin-right: 5px; }
 
 
+    /* Common span and header styles */
     span {
       padding: 2px;
       border-radius: 2px;
@@ -76,6 +94,7 @@
       text-align: left;
     }
   </style>
+  
 </head>
 <body>
   <!-- Übersicht der Lesbarkeitsstufen -->
@@ -116,47 +135,58 @@
       <h1>Light Mode</h1>
       <div>
         <p>
-            <span class="cm-readability-0">It was a clear morning.</span>
-            <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
-            <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
-            <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
-            <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
-          </p>
+          <span class="cm-readability-0">It was a clear morning.</span>
+          <span class="cm-readability-1">The breeze felt calm and light.</span>
+          <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
+          <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
+          <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
+          <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
+          <span class="cm-readability-0">He planned to buy some apples and bread.</span>
+          <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
+          <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
+          <span class="cm-readability-4">Children ran around playfully between the stalls, giggling as they passed by.</span>
+          <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
+          <span class="cm-readability-6">A distant bell rang, signaling the opening of the market for the day.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
+          <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
+          <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
+          <span class="cm-readability-4">The air grew colder, and a sense of urgency filled the streets.</span>
+          <span class="cm-readability-2">He packed up his purchases and headed home.</span>
+          <span class="cm-readability-5">The wind grew stronger, and the first raindrops began to fall.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
+          <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
+          <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
+          <span class="cm-readability-8">Thunder rumbled in the distance, as flashes of lightning illuminated the sky.</span>
+          <span class="cm-readability-7">A feeling of unease crept into his mind as the storm's intensity continued to build.</span>
+          <span class="cm-readability-9">The storm now enveloped the town, with heavy rain and gusting winds turning the streets into rivers.</span>
+          <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
+          <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
+        </p>
         
-          <p>
-            <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
-            <span class="cm-readability-0">He planned to buy some apples and bread.</span>
-            <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
-            <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
-            <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
-            <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
-            <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
-            <span class="cm-readability-2">He packed up his purchases and headed home.</span>
-            <span class="cm-readability-3">The wind grew stronger, and the first raindrops began to fall.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
-            <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
-            <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
-            <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
-            <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
-            <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
-            <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
-            <span class="cm-readability-0">He knew that this storm would pass too.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
-          </p>
+      
+        <p>
+          <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
+          <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
+          <span class="cm-readability-8">The wind howled louder, shaking the trees, and scattering leaves across the flooded path.</span>
+          <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
+          <span class="cm-readability-0">He knew that this storm would pass too.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
+          <span class="cm-readability-9">With a sigh of relief, John removed his soaked coat, realizing how fortunate he was to have shelter from the chaos outside.</span>
+          <span class="cm-readability-8">He placed his wet shoes by the door, watching the water pool on the mat, a reminder of the storm still raging outside.</span>
+        </p>
       </div>
     </div>
 
@@ -164,47 +194,58 @@
       <h1>Dark Mode</h1>
       <div>
         <p>
-            <span class="cm-readability-0">It was a clear morning.</span>
-            <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
-            <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
-            <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
-            <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
-          </p>
+          <span class="cm-readability-0">It was a clear morning.</span>
+          <span class="cm-readability-1">The breeze felt calm and light.</span>
+          <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
+          <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
+          <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
+          <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
+          <span class="cm-readability-0">He planned to buy some apples and bread.</span>
+          <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
+          <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
+          <span class="cm-readability-4">Children ran around playfully between the stalls, giggling as they passed by.</span>
+          <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
+          <span class="cm-readability-6">A distant bell rang, signaling the opening of the market for the day.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
+          <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
+          <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
+          <span class="cm-readability-4">The air grew colder, and a sense of urgency filled the streets.</span>
+          <span class="cm-readability-2">He packed up his purchases and headed home.</span>
+          <span class="cm-readability-5">The wind grew stronger, and the first raindrops began to fall.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
+          <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
+          <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
+          <span class="cm-readability-8">Thunder rumbled in the distance, as flashes of lightning illuminated the sky.</span>
+          <span class="cm-readability-7">A feeling of unease crept into his mind as the storm's intensity continued to build.</span>
+          <span class="cm-readability-9">The storm now enveloped the town, with heavy rain and gusting winds turning the streets into rivers.</span>
+          <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
+          <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
+        </p>
         
-          <p>
-            <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
-            <span class="cm-readability-0">He planned to buy some apples and bread.</span>
-            <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
-            <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
-            <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
-            <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
-            <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
-            <span class="cm-readability-2">He packed up his purchases and headed home.</span>
-            <span class="cm-readability-3">The wind grew stronger, and the first raindrops began to fall.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
-            <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
-            <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
-            <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
-            <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
-            <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
-            <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
-            <span class="cm-readability-0">He knew that this storm would pass too.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
-          </p>
+      
+        <p>
+          <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
+          <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
+          <span class="cm-readability-8">The wind howled louder, shaking the trees, and scattering leaves across the flooded path.</span>
+          <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
+          <span class="cm-readability-0">He knew that this storm would pass too.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
+          <span class="cm-readability-9">With a sigh of relief, John removed his soaked coat, realizing how fortunate he was to have shelter from the chaos outside.</span>
+          <span class="cm-readability-8">He placed his wet shoes by the door, watching the water pool on the mat, a reminder of the storm still raging outside.</span>
+        </p>
       </div>
     </div>
   </div>
@@ -245,47 +286,58 @@
       <h1>White Background</h1>
       <div>
         <p>
-            <span class="cm-readability-0">It was a clear morning.</span>
-            <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
-            <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
-            <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
-            <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
-          </p>
+          <span class="cm-readability-0">It was a clear morning.</span>
+          <span class="cm-readability-1">The breeze felt calm and light.</span>
+          <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
+          <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
+          <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
+          <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
+          <span class="cm-readability-0">He planned to buy some apples and bread.</span>
+          <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
+          <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
+          <span class="cm-readability-4">Children ran around playfully between the stalls, giggling as they passed by.</span>
+          <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
+          <span class="cm-readability-6">A distant bell rang, signaling the opening of the market for the day.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
+          <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
+          <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
+          <span class="cm-readability-4">The air grew colder, and a sense of urgency filled the streets.</span>
+          <span class="cm-readability-2">He packed up his purchases and headed home.</span>
+          <span class="cm-readability-5">The wind grew stronger, and the first raindrops began to fall.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
+          <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
+          <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
+          <span class="cm-readability-8">Thunder rumbled in the distance, as flashes of lightning illuminated the sky.</span>
+          <span class="cm-readability-7">A feeling of unease crept into his mind as the storm's intensity continued to build.</span>
+          <span class="cm-readability-9">The storm now enveloped the town, with heavy rain and gusting winds turning the streets into rivers.</span>
+          <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
+          <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
+        </p>
         
-          <p>
-            <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
-            <span class="cm-readability-0">He planned to buy some apples and bread.</span>
-            <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
-            <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
-            <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
-            <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
-            <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
-            <span class="cm-readability-2">He packed up his purchases and headed home.</span>
-            <span class="cm-readability-3">The wind grew stronger, and the first raindrops began to fall.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
-            <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
-            <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
-            <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
-            <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
-            <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
-            <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
-            <span class="cm-readability-0">He knew that this storm would pass too.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
-          </p>
+      
+        <p>
+          <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
+          <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
+          <span class="cm-readability-8">The wind howled louder, shaking the trees, and scattering leaves across the flooded path.</span>
+          <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
+          <span class="cm-readability-0">He knew that this storm would pass too.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
+          <span class="cm-readability-9">With a sigh of relief, John removed his soaked coat, realizing how fortunate he was to have shelter from the chaos outside.</span>
+          <span class="cm-readability-8">He placed his wet shoes by the door, watching the water pool on the mat, a reminder of the storm still raging outside.</span>
+        </p>
       </div>
     </div>
   
@@ -293,47 +345,58 @@
       <h1>Dark Blue Background</h1>
       <div>
         <p>
-            <span class="cm-readability-0">It was a clear morning.</span>
-            <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
-            <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
-            <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
-            <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
-          </p>
+          <span class="cm-readability-0">It was a clear morning.</span>
+          <span class="cm-readability-1">The breeze felt calm and light.</span>
+          <span class="cm-readability-3">The sun was high in the sky, and a gentle breeze swept through the village streets.</span>
+          <span class="cm-readability-2">Birds chirped in the trees, and the village slowly woke up.</span>
+          <span class="cm-readability-3">John stepped out of his house, took a deep breath, and started his walk to the market.</span>
+          <span class="cm-readability-2">It was one of those days when time seemed to pass a little slower.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
+          <span class="cm-readability-0">He planned to buy some apples and bread.</span>
+          <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
+          <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
+          <span class="cm-readability-4">Children ran around playfully between the stalls, giggling as they passed by.</span>
+          <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
+          <span class="cm-readability-6">A distant bell rang, signaling the opening of the market for the day.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
+          <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
+          <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
+          <span class="cm-readability-4">The air grew colder, and a sense of urgency filled the streets.</span>
+          <span class="cm-readability-2">He packed up his purchases and headed home.</span>
+          <span class="cm-readability-5">The wind grew stronger, and the first raindrops began to fall.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
+          <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
+          <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
+          <span class="cm-readability-8">Thunder rumbled in the distance, as flashes of lightning illuminated the sky.</span>
+          <span class="cm-readability-7">A feeling of unease crept into his mind as the storm's intensity continued to build.</span>
+          <span class="cm-readability-9">The storm now enveloped the town, with heavy rain and gusting winds turning the streets into rivers.</span>
+          <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
+          <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
+        </p>
         
-          <p>
-            <span class="cm-readability-7">As John walked through the streets, he saw people setting up their stalls, and the smell of freshly baked bread filled the air.</span>
-            <span class="cm-readability-0">He planned to buy some apples and bread.</span>
-            <span class="cm-readability-3">His neighbors greeted him warmly, and he smiled back with a nod.</span>
-            <span class="cm-readability-7">The stalls were colorful and diverse, offering fresh produce and handmade goods.</span>
-            <span class="cm-readability-5">John felt comfortable in this familiar setting.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-2">Suddenly, a cold wind picked up, and the sky began to darken.</span>
-            <span class="cm-readability-3">A few people looked up, but they continued with their shopping.</span>
-            <span class="cm-readability-3">John, however, sensed that the rain wouldn't be long and decided to hurry.</span>
-            <span class="cm-readability-2">He packed up his purchases and headed home.</span>
-            <span class="cm-readability-3">The wind grew stronger, and the first raindrops began to fall.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">When he reached the old bridge that spanned the small river, John paused for a moment.</span>
-            <span class="cm-readability-3">He loved hearing the rain patter against the water.</span>
-            <span class="cm-readability-6">The sounds of the city grew quieter as the rain intensified, and the wind howled through the narrow streets.</span>
-            <span class="cm-readability-10">It was as if nature, in all its force and wildness, had come alive, and John stood in the midst of this spectacle, feeling small and insignificant compared to the unrestrained power around him.</span>
-            <span class="cm-readability-0">Yet, he felt oddly at peace.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
-            <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
-            <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
-            <span class="cm-readability-0">He knew that this storm would pass too.</span>
-          </p>
-        
-          <p>
-            <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
-          </p>
+      
+        <p>
+          <span class="cm-readability-5">He hunched his shoulders and continued walking, eyes on the ground.</span>
+          <span class="cm-readability-9">As the rain grew heavier and the road turned into a stream, he realized how fragile life seemed in moments like these, as if everything that mattered could vanish in the blink of an eye.</span>
+          <span class="cm-readability-8">The wind howled louder, shaking the trees, and scattering leaves across the flooded path.</span>
+          <span class="cm-readability-2">But John was not the type to let such thoughts get him down.</span>
+          <span class="cm-readability-0">He knew that this storm would pass too.</span>
+        </p>
+      
+        <p>
+          <span class="cm-readability-10">The moment he opened the door to his house and the warmth of the interior embraced him, he realized that it was only these simple moments of everyday life that truly mattered – these brief, fleeting instances that remind us that life, despite its uncertainties, always moves forward, no matter how fierce the storm outside may be.</span>
+          <span class="cm-readability-9">With a sigh of relief, John removed his soaked coat, realizing how fortunate he was to have shelter from the chaos outside.</span>
+          <span class="cm-readability-8">He placed his wet shoes by the door, watching the water pool on the mat, a reminder of the storm still raging outside.</span>
+        </p>
       </div>
     </div>
   </div>
